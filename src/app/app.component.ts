@@ -18,10 +18,17 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  
+
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+              // let status bar overlay webview
+        this.statusBar.overlaysWebView(true);
+
+        // set status bar to white
+        this.statusBar.backgroundColorByHexString('#6dd500');
     });
   }
 }

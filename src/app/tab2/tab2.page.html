@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Tab 2
+      SELECT A BOX
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list *ngFor="let item of listitems">
+    <ion-item>
+      <ion-icon name="chatbox" style="color: #6dd500;font-size: 38px;"></ion-icon>
+      <ion-label style="margin-left: 3%;" (click)="open(item)"> {{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>  
 </ion-content>
+<ion-footer style="position: absolute;bottom: 0px;background-image: linear-gradient(#9c9c9b, #fff, #fff);">
+  <ion-toolbar style="background-image: linear-gradient(#9c9c9b, #fff, #fff);">
+    <ion-buttons padding slot="start" >
+      <a href="https://www.incognea.to/" style="color: white !important;">
+      <ion-button padding style="background-color: #6dd500; font-size: 11px;color: white !important;">Create Your Own Box</ion-button></a>
+    </ion-buttons>
+    <ion-buttons padding slot="end" > 
+      <img slot="end" style="width:160px;" src="../../assets/logo.png"/>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-footer>

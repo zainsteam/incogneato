@@ -1,5 +1,7 @@
 {
   "name": "incogneato",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
