@@ -60,7 +60,7 @@ export class Tab1Page {
         console.log(response);
         this.listitems = response;
         this.flag = true;
-        this.presentToast("code match successfully");
+        // this.presentToast("code match successfully");
         this.navCtrl.navigateForward(['/tab2', {items: JSON.stringify(this.listitems)}] );      
     })
   }

@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.header-md:after
+{
+  background-image: none;
+}
+.header-ios ion-toolbar:last-of-type
+{
+  --border-width: 0px;
+}
+
+.new-background-color
+{
+  --background: #6dd500;
+  --color : #ffffff;
+}
